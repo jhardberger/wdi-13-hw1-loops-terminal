@@ -1,0 +1,117 @@
+Part I:
+
+Johns-MacBook-Pro:homework_part_1 john$ mkdir death_star
+Johns-MacBook-Pro:homework_part_1 john$ mkdir galaxy_far_far_away
+Johns-MacBook-Pro:homework_part_1 john$ ls
+commands.txt		death_star		galaxy_far_far_away
+Johns-MacBook-Pro:homework_part_1 john$ touch death_star/darth_vader.txt
+Johns-MacBook-Pro:homework_part_1 john$ touch death_star/princess_leia.txt
+Johns-MacBook-Pro:homework_part_1 john$ touch death_star/storm_trooper.txt
+Johns-MacBook-Pro:homework_part_1 john$ mkdir galaxy_far_far_away/tatooine
+Johns-MacBook-Pro:homework_part_1 john$ touch galaxy_far_far_away/tatooine/luke.txt
+Johns-MacBook-Pro:homework_part_1 john$ touch galaxy_far_far_away/tatooine/ben_kenobi.txt
+Johns-MacBook-Pro:homework_part_1 john$ mkdir galaxy_far_far_away/tatooine/millenium_falcon
+Johns-MacBook-Pro:homework_part_1 john$ touch galaxy_far_far_away/tatooine/millenium_falcon/han_solo.txt
+Johns-MacBook-Pro:homework_part_1 john$ touch galaxy_far_far_away/tatooine/millenium_falcon/chewbaca.txt
+Johns-MacBook-Pro:homework_part_1 john$ 
+
+Part II: 
+
+Johns-MacBook-Pro:homework_part_1 john$ cd galaxy_far_far_away/tatooine/
+Johns-MacBook-Pro:tatooine john$ ls
+ben_kenobi.txt		luke.txt		millenium_falcon
+Johns-MacBook-Pro:tatooine john$ mv ben_kenobi.txt obi_wan.txt
+Johns-MacBook-Pro:tatooine john$ ls
+luke.txt		millenium_falcon	obi_wan.txt
+
+Part III:
+
+Johns-MacBook-Pro:tatooine john$ cd ..
+Johns-MacBook-Pro:galaxy_far_far_away john$ cd ..
+Johns-MacBook-Pro:homework_part_1 john$ cd death_star/
+Johns-MacBook-Pro:death_star john$ ls
+darth_vader.txt		princess_leia.txt	storm_trooper.txt
+Johns-MacBook-Pro:death_star john$ cp storm_trooper.txt /Users/john/salty-sardines/09-10-terminal-loops/wdi-13-hw1-loops-terminal/homework/homework_part_1/galaxy_far_far_away/tatooine
+
+Part IV: 
+
+Johns-MacBook-Pro:homework_part_1 john$ cd galaxy_far_far_away/tatooine/
+Johns-MacBook-Pro:tatooine john$ ls
+luke.txt		obi_wan.txt
+millenium_falcon	storm_trooper.txt
+Johns-MacBook-Pro:tatooine john$ mv luke.txt millenium_falcon/
+Johns-MacBook-Pro:tatooine john$ mv obi_wan.txt millenium_falcon/
+Johns-MacBook-Pro:tatooine john$ ls
+millenium_falcon	storm_trooper.txt
+Johns-MacBook-Pro:tatooine john$ mv millenium_falcon/ ..
+Johns-MacBook-Pro:tatooine john$ ls
+storm_trooper.txt
+Johns-MacBook-Pro:tatooine john$ cd ..
+Johns-MacBook-Pro:galaxy_far_far_away john$ ls
+millenium_falcon	tatooine
+Johns-MacBook-Pro:galaxy_far_far_away john$ cd ..
+Johns-MacBook-Pro:homework_part_1 john$ mv death_star/ galaxy_far_far_away/
+Johns-MacBook-Pro:homework_part_1 john$ ls
+commands.txt		galaxy_far_far_away
+Johns-MacBook-Pro:homework_part_1 john$ cd galaxy_far_far_away/
+Johns-MacBook-Pro:galaxy_far_far_away john$ mv millenium_falcon/ death_star/
+Johns-MacBook-Pro:galaxy_far_far_away john$ cd death_star/
+Johns-MacBook-Pro:death_star john$ ls
+darth_vader.txt		princess_leia.txt
+millenium_falcon	storm_trooper.txt
+Johns-MacBook-Pro:death_star john$ mv princess_leia.txt millenium_falcon/
+Johns-MacBook-Pro:death_star john$ ls
+darth_vader.txt		millenium_falcon	storm_trooper.txt
+
+(the weren't instructions that I saw to move death_star into the galaxy, but it made plot sense so I went ahead and did it)
+
+Part V:
+
+Johns-MacBook-Pro:death_star john$ cd millenium_falcon/
+Johns-MacBook-Pro:millenium_falcon john$ ls
+chewbaca.txt		luke.txt		princess_leia.txt
+han_solo.txt		obi_wan.txt
+Johns-MacBook-Pro:millenium_falcon john$ rm obi_wan.txt 
+Johns-MacBook-Pro:millenium_falcon john$ ls
+chewbaca.txt		luke.txt
+han_solo.txt		princess_leia.txt
+
+Part VI: 
+
+Johns-MacBook-Pro:millenium_falcon john$ cd ../..
+Johns-MacBook-Pro:galaxy_far_far_away john$ mkdir yavin_4
+Johns-MacBook-Pro:galaxy_far_far_away john$ mv death_star/millenium_falcon/ yavin_4/
+Johns-MacBook-Pro:galaxy_far_far_away john$ mkdir yavin_4/x_wing
+Johns-MacBook-Pro:galaxy_far_far_away john$ cd yavin_4
+Johns-MacBook-Pro:yavin_4 john$ mv millenium_falcon/princess_leia.txt yavin_4/
+Johns-MacBook-Pro:yavin_4 john$ mv millenium_falcon/luke.txt x_wing/
+Johns-MacBook-Pro:yavin_4 john$ mv millenium_falcon/ ..
+Johns-MacBook-Pro:yavin_4 john$ mv x_wing/ ..
+Johns-MacBook-Pro:yavin_4 john$ ls
+princess_leia.txt
+Johns-MacBook-Pro:yavin_4 john$ 
+Johns-MacBook-Pro:yavin_4 john$ cd ..
+Johns-MacBook-Pro:galaxy_far_far_away john$ ls
+death_star		tatooine		yavin_4
+millenium_falcon	x_wing
+Johns-MacBook-Pro:galaxy_far_far_away john$ mkdir death_star/tie_fighter_1
+Johns-MacBook-Pro:galaxy_far_far_away john$ mkdir death_star/tie_fighter_2
+Johns-MacBook-Pro:galaxy_far_far_away john$ mkdir death_star/tie_fighter_3
+Johns-MacBook-Pro:galaxy_far_far_away john$ mv death_star/darth_vader.txt death_star/tie_fighter_1
+Johns-MacBook-Pro:galaxy_far_far_away john$ cp death_star/storm_trooper.txt death_star/tie_fighter_2
+Johns-MacBook-Pro:galaxy_far_far_away john$ cp death_star/storm_trooper.txt death_star/tie_fighter_3
+Johns-MacBook-Pro:galaxy_far_far_away john$ mv death_star/tie_fighter_1 galaxy_far_far_away
+Johns-MacBook-Pro:galaxy_far_far_away john$ mv death_star/tie_fighter_2 galaxy_far_far_away
+Johns-MacBook-Pro:galaxy_far_far_away john$ mv death_star/tie_fighter_3 galaxy_far_far_away
+
+Part VII:
+
+Johns-MacBook-Pro:galaxy_far_far_away john$ rm -r tie_fighter_2
+Johns-MacBook-Pro:galaxy_far_far_away john$ rm -r tie_fighter_3
+
+PART VIII:
+
+Johns-MacBook-Pro:galaxy_far_far_away john$ touch x_wing/the_force.txt
+Johns-MacBook-Pro:galaxy_far_far_away john$ rm -r death_star/
+Johns-MacBook-Pro:galaxy_far_far_away john$ mv x_wing/ yavin_4/
+Johns-MacBook-Pro:galaxy_far_far_away john$ mv millenium_falcon/ yavin_4/
